@@ -3,3 +3,9 @@ repositories:
     type: github
     url: https://github.com/lampac-project/modules
     branch: main
+
+  - name: lampac-ukraine
+    type: github
+    url: https://github.com/lampame/lampac-ukraine
+    branch: main
+
