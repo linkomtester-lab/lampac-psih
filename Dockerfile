@@ -1,14 +1,9 @@
-FROM mcr.microsoft.com/dotnet/aspnet:6.0
+FROM ghcr.io/immisterio/lampac:latest
 
 WORKDIR /home
 
-# завантажуємо готовий Lampac
-ADD https://github.com/immisterio/Lampac/releases/latest/download/linux-x64.tar.gz /tmp/lampac.tar.gz
-
-RUN tar -xzf /tmp/lampac.tar.gz -C /home \
-    && rm /tmp/lampac.tar.gz \
-    && chmod +x /home/Lampac
+COPY module /home/module
 
 EXPOSE 8000
 
-CMD ["/home/Lampac"]
+CMD ["dotnet", "Lampac.dll"]
