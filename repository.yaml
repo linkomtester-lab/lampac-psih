@@ -1,0 +1,5 @@
+repositories:
+  - name: lampac-modules
+    type: github
+    url: https://github.com/lampac-project/modules
+    branch: main
