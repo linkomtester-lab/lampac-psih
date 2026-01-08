@@ -1,10 +1,3 @@
-repositories:
-  - name: lampac-modules
-    type: github
-    url: https://github.com/lampac-project/modules
-    branch: main
-
-  - name: lampac-ukraine
-    type: github
-    url: https://github.com/lampame/lampac-ukraine
-    branch: main
+git add module/repository.yaml
+git commit -m "Add repository.yaml"
+git push origin main
