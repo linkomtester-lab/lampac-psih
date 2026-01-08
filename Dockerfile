@@ -2,11 +2,13 @@ FROM mcr.microsoft.com/dotnet/aspnet:6.0
 
 WORKDIR /home
 
-# копіюємо всі файли з репозиторію
-COPY . .
+# завантажуємо готовий Lampac
+ADD https://github.com/immisterio/Lampac/releases/latest/download/linux-x64.tar.gz /tmp/lampac.tar.gz
 
-# відкриваємо порт
+RUN tar -xzf /tmp/lampac.tar.gz -C /home \
+    && rm /tmp/lampac.tar.gz \
+    && chmod +x /home/Lampac
+
 EXPOSE 8000
 
-# запускаємо Lampac
-ENTRYPOINT ["dotnet", "Lampac.dll"]
+CMD ["/home/Lampac"]
