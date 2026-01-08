@@ -1,3 +1,0 @@
-git add module/repository.yaml
-git commit -m "Add repository.yaml"
-git push origin main
